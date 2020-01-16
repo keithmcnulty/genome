@@ -1,9 +1,7 @@
-if (!requireNamespace("BiocManager", quietly = TRUE)) {
-  install.packages("BiocManager")
-}
- 
-
 if (!(c("gwascat") %in% installed.packages())) {
+  if (!requireNamespace("BiocManager", quietly = TRUE)) {
+    install.packages("BiocManager")
+  }
   BiocManager::install("gwascat")
 } 
 
