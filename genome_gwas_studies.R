@@ -1,3 +1,11 @@
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+if (!(c("gwascat") %in% installed.packages())) {
+  BiocManager::install("gwascat")
+} 
+
+
 library(readr)
 library(dplyr)
 library(gwascat)
